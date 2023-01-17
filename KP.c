@@ -93,8 +93,8 @@ int main() {
 			int* index = malloc((k+2) * sizeof(int));
 			index = poisk_manufacturer(comp, k, A, index);
 
-			for (int i = 0; i < k; i++) {
-				if (index[i] >= 0)printf("%i|Производитель:%s\nФорм-фактор:%s\nТипоразмер:%s\nЦвет:%s\nВысота:%i\nДлина:%i\nШирина:%.1f\nНаличие подсветки и пр.:%s\n", i+1, comp[i].manufacturer, comp[i].formfactor, comp[i].typesize, comp[i].color, comp[i].height, comp[i].dlina, comp[i].shirina, comp[i].availability);
+			for (int i = 1; i < index[0]; i++) {
+				printf("%i|Производитель:%s\nФорм-фактор:%s\nТипоразмер:%s\nЦвет:%s\nВысота:%i\nДлина:%i\nШирина:%.1f\nНаличие подсветки и пр.:%s\n", i+1, comp[index[i]].manufacturer, comp[index[i]].formfactor, comp[index[i]].typesize, comp[index[i]].color, comp[index[i]].height, comp[index[i]].dlina, comp[index[i]].shirina, comp[index[i]].availability);
 			}
 			system("pause");
 			p = -1;
